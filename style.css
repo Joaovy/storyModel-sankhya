@@ -63,11 +63,22 @@ body {
         color: #fff;
         font-size: 15px;
         line-height: 1.4;
-        /*text-shadow: 0 0 8px #000, 0 0 4px #00A37A;*/
         text-align: left;
         max-width: 80%;
         margin: 35px 25px;
         z-index: 10;
+    }
+
+    @media (max-width: 600px) {
+        .text {
+            bottom: 120px; /* Sobe o texto para dar mais espaço para os indicadores */
+            font-size: 14px;
+            margin: 20px 10px;
+        }
+        .indicators {
+            bottom: 20px; /* Garante que as bolinhas fiquem visíveis no mobile */
+            z-index: 20;
+        }
     }
 
     /* Indicadores */

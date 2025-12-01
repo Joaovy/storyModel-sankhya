@@ -3,7 +3,7 @@ let currentIndex = 0;
 const stories = document.getElementById("stories");
 const indicators = document.getElementById("indicators");
 
-// Criar bolinhas dinamicamente
+// bolinhas dinamicas
 for (let i = 0; i < totalStories; i++) {
     const dot = document.createElement("div");
     dot.className = "dot" + (i === 0 ? " active" : "");
