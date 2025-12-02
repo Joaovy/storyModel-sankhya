@@ -57,8 +57,8 @@
     scrollbar-width: thin;
 }
 .album-photo {
-    height: 340px;
-    max-width: 240px;
+    height: 420px;
+    max-width: 300px;
     object-fit: contain;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     margin-bottom: 12px;

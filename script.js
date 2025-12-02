@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
     // Apresentação: transição para stories e álbum
     const presentLogo = document.getElementById("presentLogo");
@@ -36,6 +34,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(() => {
                     albumSection.style.opacity = "1";
                 }, 50);
+            }, 1200);
+        });
+    }
+
+    // Voltar do álbum para apresentação
+    const backBtn = document.getElementById("backBtn");
+    if (backBtn && presentContainer && albumSection) {
+        backBtn.addEventListener("click", function () {
+            albumSection.classList.add("hide");
+            presentContainer.classList.remove("hide");
+            presentContainer.style.display = "flex";
+            presentContainer.style.opacity = "1";
+            albumSection.style.opacity = "0";
+            setTimeout(() => {
+                albumSection.style.display = "none";
             }, 1200);
         });
     }
