@@ -9,7 +9,7 @@
     border-radius: 18px;
     padding: 12px 38px;
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 500;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     cursor: pointer;
     transition: background 0.2s, box-shadow 0.2s;
@@ -40,24 +40,22 @@
 .album-gallery {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 32px;
     overflow-x: auto;
     padding: 32px 0;
-    width: 100vw;
+    width: 90vw;
     height: 80vh;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     scrollbar-width: thin;
 }
 .album-photo {
-    height: 420px;
-    max-width: 320px;
+    height: 340px;
+    max-width: 240px;
     object-fit: contain;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     margin-bottom: 12px;
     transition: box-shadow 0.2s, transform 0.2s;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .album-photo:hover {
     box-shadow: 0 16px 48px rgba(0,0,0,0.28);
