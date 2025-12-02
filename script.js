@@ -1,4 +1,26 @@
+
 document.addEventListener("DOMContentLoaded", function () {
+    // Apresentação: transição para stories
+    const presentLogo = document.getElementById("presentLogo");
+    const presentContainer = document.getElementById("present");
+    const storysSection = document.getElementById("storysSection");
+
+    if (presentLogo && presentContainer && storysSection) {
+        presentLogo.addEventListener("click", function () {
+            presentContainer.classList.add("hide");
+            setTimeout(() => {
+                presentContainer.style.display = "none";
+                storysSection.style.display = "block";
+                storysSection.style.opacity = "0";
+                storysSection.style.transition = "opacity 0.7s";
+                setTimeout(() => {
+                    storysSection.style.opacity = "1";
+                }, 50);
+            }, 1200);
+        });
+    }
+
+    // Stories logic
     const totalStories = 7;
     let currentIndex = 0;
     const stories = document.getElementById("stories");
