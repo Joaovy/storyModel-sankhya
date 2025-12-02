@@ -178,17 +178,24 @@ body {
         margin: 20px 10px;
     }
     .indicators {
-        bottom: 15px; /* Garante que as bolinhas fiquem visíveis no mobile */
-        /*z-index: 20;*/
+        bottom: 90px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        text-align: center;
+        z-index: 1000;
     }
 }
 
 /* Indicadores */
 .indicators {
     position: absolute;
-    bottom: 40px;
+    left: 0;
+    right: 0;
+    bottom: 80px;
     width: 100%;
     text-align: center;
+    z-index: 1000;
 }
 
 .dot {
