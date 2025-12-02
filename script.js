@@ -1,10 +1,14 @@
 
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Apresentação: transição para stories
+    // Apresentação: transição para stories e álbum
     const presentLogo = document.getElementById("presentLogo");
     const presentContainer = document.getElementById("present");
     const storysSection = document.getElementById("storysSection");
+    const albumBtn = document.getElementById("albumBtn");
+    const albumSection = document.getElementById("albumSection");
 
+    // Transição para stories
     if (presentLogo && presentContainer && storysSection) {
         presentLogo.addEventListener("click", function () {
             presentContainer.classList.add("hide");
@@ -15,6 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 storysSection.style.transition = "opacity 0.7s";
                 setTimeout(() => {
                     storysSection.style.opacity = "1";
+                }, 50);
+            }, 1200);
+        });
+    }
+
+    // Transição para álbum
+    if (albumBtn && presentContainer && albumSection) {
+        albumBtn.addEventListener("click", function () {
+            presentContainer.classList.add("hide");
+            setTimeout(() => {
+                presentContainer.style.display = "none";
+                albumSection.style.display = "flex";
+                albumSection.style.opacity = "0";
+                albumSection.style.transition = "opacity 0.7s";
+                setTimeout(() => {
+                    albumSection.style.opacity = "1";
                 }, 50);
             }, 1200);
         });
